@@ -7,12 +7,13 @@ import org.testng.annotations.Test;
 public class ContactsDeletionTest extends TestBase{
 
     @Test
-    public void ContactsDeletionTest() {
-        int before = wd.findElements(By.xpath("//*[@title='Edit']")).size();
-        selectContact();
-        initContactDeletion();
-        confirmAlert();
-        int after = wd.findElements(By.xpath("//*[@title='Edit']")).size();
+    public void contactsDeletionTest() {
+        int before = app.getContactCount();
+        app.selectContact();
+        app.initContactDeletion();
+        app.confirmAlert();
+        int after = app.getContactCount();
         Assert.assertEquals(after, before-1);
     }
+
 }
