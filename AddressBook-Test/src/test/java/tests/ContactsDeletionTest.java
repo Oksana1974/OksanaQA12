@@ -8,11 +8,11 @@ public class ContactsDeletionTest extends TestBase{
 
     @Test
     public void contactsDeletionTest() {
-        int before = app.getContactCount();
-        app.selectContact();
-        app.initContactDeletion();
+        int before = app.getContactHelper().getContactCount();
+        app.getContactHelper().selectContact();
+        app.getContactHelper().initContactDeletion();
         app.confirmAlert();
-        int after = app.getContactCount();
+        int after = app.getContactHelper().getContactCount();
         Assert.assertEquals(after, before-1);
     }
 
