@@ -67,4 +67,8 @@ public class ContactHelper extends HelperBase{
     public int getContactCount() {
         return wd.findElements(By.xpath("//*[@title='Edit']")).size();
     }
+
+    public void updateContact() {
+        click(By.name("update"));
+    }
 }
