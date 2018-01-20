@@ -8,6 +8,7 @@ public class ContactsCreateTest extends TestBase{
 
     @Test
     public void contactsCreateTest() {
+        app.getNavigationHelper().goToContactsPage();
         int before = app.getContactHelper().getContactCount();
         app.getContactHelper().createContactTest();
         app.getContactHelper().fillContactsForm(new ContactData("Oksana", "AA", "AB", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "1111", "1122", "d", "d", "d"));
