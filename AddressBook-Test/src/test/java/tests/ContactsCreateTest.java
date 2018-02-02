@@ -8,12 +8,32 @@ public class ContactsCreateTest extends TestBase{
 
     @Test
     public void contactsCreateTest() {
-        app.getNavigationHelper().goToContactsPage();
-        int before = app.getContactHelper().getContactCount();
-        app.getContactHelper().createContactTest();
-        app.getContactHelper().fillContactsForm(new ContactData("Oksana", "AA", "AB", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "a", "1111", "1122", "d", "d", "d"));
-        app.getContactHelper().submitContactCreation();
-        int after = app.getContactHelper().getContactCount();
+        app.goTo().contactsPage();
+        int before = app.contacts().getContactCount();
+        app.contacts().createContactTest();
+        app.contacts().fillContactsForm(new ContactData()
+                .withFirstName("A")
+                .withLastName("g")
+                .withNickName("l")
+                .withAddress("ff")
+                .withAddress2("")
+                .withaYear("")
+                .withbYear("")
+                .withCompany("h")
+                .withEmail("j")
+                .withEmail2("h")
+                .withEmail3("k")
+                .withFax("j")
+                .withHome("h")
+                .withHomePage("j")
+                .withMiddleName("h")
+                .withMobile("g")
+                .withNotes("t")
+                .withPhone2("t")
+                .withTitle("u")
+                .withWork("j"));
+        app.contacts().submitContactCreation();
+        int after = app.contacts().getContactCount();
         Assert.assertEquals(after, before+1);
     }
 }

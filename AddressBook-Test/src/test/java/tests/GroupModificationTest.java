@@ -7,14 +7,21 @@ public class GroupModificationTest extends TestBase {
 
     @Test
     public void testGroupModify(){
-        app.getNavigationHelper().goToGroupsPage();
-        if(!app.getGroupHelper().isThereAGroup()){
-            app.getGroupHelper().createGroup(new GroupData("y", "j", "f"));
+        app.goTo().groupsPage();
+        if(!app.groups().isThereAGroup()){
+            app.groups().createGroup(new GroupData()
+                    .withName("fff")
+                    .withHeader("ggg")
+                    .withFooter("ddd"));
         }
-        app.getGroupHelper().selectGroup();
-        app.getGroupHelper().initgroupModification();
-        app.getGroupHelper().fillGroupForm(new GroupData(" ", null, " "));
-        app.getGroupHelper().confirmGroupModification();
-        app.getGroupHelper().returnToGroupsPage();
+        int before = app.groups().getGroupCount();
+        app.groups().selectGroupByIndex(before-1);
+        app.groups().initgroupModification();
+        app.groups().fillGroupForm(new GroupData()
+                .withName(null)
+                .withHeader(" ")
+                .withFooter(" "));
+        app.groups().confirmGroupModification();
+        app.groups().returnToGroupsPage();
     }
 }

@@ -9,7 +9,7 @@ public class NavigationHelper extends HelperBase{
         super(wd);
     }
 
-    public void goToGroupsPage() {
+    public void groupsPage() {
         if(isElementPresent(By.tagName("h1"))
                 &&wd.findElement(By.tagName("h1"))
                 .getText().equals("Groups")
@@ -19,7 +19,7 @@ public class NavigationHelper extends HelperBase{
         click(By.linkText("groups"));
     }
 
-    public void goToContactsPage() {
+    public void contactsPage() {
         if(isElementPresent(By.xpath("//*[@value='Send e-Mail']"))
                 && isElementPresent(By.name("add"))){
             return;
