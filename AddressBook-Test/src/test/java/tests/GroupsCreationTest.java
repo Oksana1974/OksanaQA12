@@ -4,12 +4,15 @@ import model.GroupData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class GroupsCreationTest extends TestBase{
 
     @Test
     public void groupsCreationTest() {
         app.goTo().groupsPage();
-        int before = app.groups().getGroupCount();
+        List<GroupData> before = app.groups().getGroupList();
+//        int before = app.groups().getGroupCount();
         app.groups().initGroupCreation();
         app.groups().fillGroupForm(new GroupData()
                 .withName("dd")
@@ -17,8 +20,10 @@ public class GroupsCreationTest extends TestBase{
                 .withFooter("gg"));
         app.groups().submitGroupCreation();
         app.groups().returnToGroupsPage();
-        int after = app.groups().getGroupCount();
-        Assert.assertEquals(after, before+1);
+        List<GroupData> after = app.groups().getGroupList();
+        Assert.assertEquals(after.size(), before.size()+1);
+//        int after = app.groups().getGroupCount();
+//        Assert.assertEquals(after, before+1);
     }
 
 }

@@ -4,6 +4,8 @@ import model.ContactData;
 import org.testng.Assert;
 import org.testng.annotations.Test;
 
+import java.util.List;
+
 public class ContactsDeletionTest extends TestBase{
 
     @Test
@@ -32,11 +34,15 @@ public class ContactsDeletionTest extends TestBase{
                     .withTitle("u")
                     .withWork("j"));
         }
-        int before = app.contacts().getContactCount();
-        app.contacts().selectContactByIndex(before-1);
+        List<ContactData> before = app.contacts().getContactList();
+//        int before = app.contacts().getContactCount();
+        app.contacts().selectAndModifyContactByIndex(before.size()-1);
         app.contacts().initContactDeletion();
-//        app.getContactHelper().confirmAlert();
-        int after = app.contacts().getContactCount();
-        Assert.assertEquals(after, before-1);
+//        app.contacts().confirmAlert();
+//        int after = app.contacts().getContactCount();
+        List<ContactData> after = app.contacts().getContactList();
+        Assert.assertEquals(after.size(), before.size()-1);
+        before.remove(before.size()-1);
+        Assert.assertEquals(before, after);
     }
 }

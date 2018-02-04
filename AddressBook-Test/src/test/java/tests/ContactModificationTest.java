@@ -1,7 +1,11 @@
 package tests;
 
 import model.ContactData;
+import org.testng.Assert;
 import org.testng.annotations.Test;
+
+import java.util.HashSet;
+import java.util.List;
 
 public class ContactModificationTest extends TestBase {
 
@@ -31,29 +35,19 @@ public class ContactModificationTest extends TestBase {
                     .withTitle("u")
                     .withWork("j"));
         }
-        int before = app.contacts().getContactCount();
-        app.contacts().selectContactByIndex(before-1);
-        app.contacts().fillContactsForm(new ContactData()
-                .withFirstName("")
-                .withLastName("")
-                .withNickName("")
-                .withAddress("")
-                .withAddress2("")
-                .withaYear("")
-                .withbYear("")
-                .withCompany("")
-                .withEmail("")
-                .withEmail2("")
-                .withEmail3("")
-                .withFax("")
-                .withHome("")
-                .withHomePage("")
-                .withMiddleName("")
-                .withMobile("")
-                .withNotes("")
-                .withPhone2("")
-                .withTitle("")
-                .withWork(""));
+//        int before = app.contacts().getContactCount();
+        List<ContactData> before = app.contacts().getContactList();
+        app.contacts().selectAndModifyContactByIndex(before.size()-1);
+        ContactData contact = new ContactData()
+                .withId(before.get(before.size()-1).getId())
+                .withFirstName("Test")
+                .withLastName("Test");
+        app.contacts().fillContactsForm(contact);
         app.contacts().updateContact();
+        List<ContactData> after = app.contacts().getContactList();
+        Assert.assertEquals(after.size(), before.size());
+        before.remove(before.size()-1);
+        before.add(contact);
+        Assert.assertEquals(new HashSet<Object>(before), new HashSet<Object>(after));
     }
 }
