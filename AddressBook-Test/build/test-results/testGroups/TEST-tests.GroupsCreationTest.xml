@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="tests.GroupsCreationTest" tests="1" skipped="0" failures="0" errors="0" timestamp="2018-02-06T14:56:29" hostname="PC123" time="3.313">
+  <properties/>
+  <testcase name="groupsCreationTest" classname="tests.GroupsCreationTest" time="3.313"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>

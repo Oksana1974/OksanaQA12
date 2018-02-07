@@ -15,13 +15,13 @@ public class ContactsCreateTest extends TestBase{
         List<ContactData> before = app.contacts().getContactList();
         app.contacts().createContactTest();
         app.contacts().fillContactsForm(new ContactData()
-                .withFirstName("Test")
-                .withLastName("g")
+                .withFirstName("Test3")
+                .withLastName("Tesst3")
                 .withNickName("l")
                 .withAddress("ff")
                 .withAddress2("")
-                .withaYear("")
-                .withbYear("")
+                .withaYear("1974")
+                .withbYear("1981")
                 .withCompany("h")
                 .withEmail("j")
                 .withEmail2("h")
@@ -34,7 +34,12 @@ public class ContactsCreateTest extends TestBase{
                 .withNotes("t")
                 .withPhone2("t")
                 .withTitle("u")
-                .withWork("j"));
+                .withWork("j")
+                .withGroup("Test")
+                .withbDay("4")
+                .withbMonth("May")
+                .withaDay("20")
+                .withaMonth("May"));
         app.contacts().submitContactCreation();
 //        int after = app.contacts().getContactCount();
         List<ContactData> after = app.contacts().getContactList();
