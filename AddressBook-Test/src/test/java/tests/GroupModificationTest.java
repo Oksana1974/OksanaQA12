@@ -24,7 +24,7 @@ public class GroupModificationTest extends TestBase {
         app.groups().initgroupModification();
         GroupData group = new GroupData()
                 .withId(before.get(before.size()-1).getId())
-                .withName("test 1");
+                .withName("test 23");
         app.groups().fillGroupForm(group);
         app.groups().confirmGroupModification();
         app.groups().returnToGroupsPage();

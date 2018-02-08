@@ -35,28 +35,13 @@ public class ContactHelper extends HelperBase{
         type(By.name("email2"), contactData.getEmail2());
         type(By.name("email3"), contactData.getEmail3());
         type(By.name("homepage"), contactData.getHomePage());
-////        if (!wd.findElement(By.xpath("//div[@id='content']/form/select[1]//option[6]")).isSelected()) {
-////            wd.findElement(By.xpath("//div[@id='content']/form/select[1]//option[6]")).click();
-////        }
-////        if (!wd.findElement(By.xpath("//div[@id='content']/form/select[2]//option[11]")).isSelected()) {
-////            wd.findElement(By.xpath("//div[@id='content']/form/select[2]//option[11]")).click();
-////        }
         type(By.name("byear"), contactData.getbYear());
-////        if (!wd.findElement(By.xpath("//div[@id='content']/form/select[3]//option[6]")).isSelected()) {
-////            wd.findElement(By.xpath("//div[@id='content']/form/select[3]//option[6]")).click();
-////        }
-////        if (!wd.findElement(By.xpath("//div[@id='content']/form/select[4]//option[12]")).isSelected()) {
-////            wd.findElement(By.xpath("//div[@id='content']/form/select[4]//option[12]")).click();
-////        }
         type(By.name("ayear"), contactData.getaYear());
-////        if (!wd.findElement(By.xpath("//div[@id='content']/form/select[5]//option[2]")).isSelected()) {
-////            wd.findElement(By.xpath("//div[@id='content']/form/select[5]//option[2]")).click();
-//        }
-        new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getbDay());
-        new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getbMonth());
-        new Select(wd.findElement(By.name("aday"))).selectByVisibleText(contactData.getaDay());
-        new Select(wd.findElement(By.name("amonth"))).selectByVisibleText(contactData.getaMonth());
-        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
+//        new Select(wd.findElement(By.name("bday"))).selectByVisibleText(contactData.getbDay());
+//        new Select(wd.findElement(By.name("bmonth"))).selectByVisibleText(contactData.getbMonth());
+//        new Select(wd.findElement(By.name("aday"))).selectByVisibleText(contactData.getaDay());
+//        new Select(wd.findElement(By.name("amonth"))).selectByVisibleText(contactData.getaMonth());
+//        new Select(wd.findElement(By.name("new_group"))).selectByVisibleText(contactData.getGroup());
         type(By.name("address2"), contactData.getAddress2());
         type(By.name("phone2"), contactData.getPhone2());
         type(By.name("notes"), contactData.getNotes());
@@ -96,17 +81,6 @@ public class ContactHelper extends HelperBase{
         fillContactsForm(contact);
         submitContactCreation();
     }
-
-//    public List<ContactData> getContactList() {
-////        List<ContactData> contacts = new ArrayList<>();
-////        List<WebElement> elements = wd.findElements(By.cssSelector("td.center"));
-////        for(WebElement element : elements){
-////            int id = Integer.parseInt(element.findElement(By.tagName("input")).getAttribute("value"));
-////            ContactData contact = new ContactData();
-////            contacts.add(contact);
-////        }
-////        return contacts;
-////    }
 
     public List<ContactData> getContactList() {
         List<ContactData> contacts = new ArrayList<>();
