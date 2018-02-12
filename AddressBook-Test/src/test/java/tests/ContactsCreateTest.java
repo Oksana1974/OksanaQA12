@@ -67,4 +67,27 @@ public class ContactsCreateTest extends TestBase {
         List<ContactData> after = app.contacts().getContactList();
         Assert.assertEquals(after.size(), before.size() + 1);
     }
+
+    @Test
+    public void contactsCreateTestWithPhoto() {
+        app.goTo().contactsPage();
+//        int before = app.contacts().getContactCount();
+        List<ContactData> before = app.contacts().getContactList();
+        app.contacts().createContactTest();
+        File photo = new File("src/test/resources/photo.jpg");
+        app.contacts().fillContactsForm(new ContactData()
+        .withFirstName("Photo")
+        .withLastName("Photo")
+        .withPhoto(photo));
+        app.contacts().submitContactCreation();
+//        int after = app.contacts().getContactCount();
+        List<ContactData> after = app.contacts().getContactList();
+        Assert.assertEquals(after.size(), before.size() + 1);
+    }
+
+    @Test
+    public void getCurrentURL(){
+        File curr = new File(".");
+        System.out.println(curr.getAbsolutePath());
+    }
 }
