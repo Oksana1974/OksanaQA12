@@ -1,0 +1,6 @@
+15:44:00.884 [main] INFO  tests.TestBase - Start testcontactsCreateTestwith parameter[Ljava.lang.Object;@21e98f
+15:44:23.355 [main] INFO  tests.TestBase - Stop test contactsCreateTest
+15:44:23.355 [main] INFO  tests.TestBase - Start testcontactsCreateTestwith parameter[Ljava.lang.Object;@1cd8c7a
+15:44:44.904 [main] INFO  tests.TestBase - Stop test contactsCreateTest
+15:44:44.906 [main] INFO  tests.TestBase - Start testcontactsCreateTestwith parameter[Ljava.lang.Object;@499e4f
+15:45:06.362 [main] INFO  tests.TestBase - Stop test contactsCreateTest

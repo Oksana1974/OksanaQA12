@@ -11,6 +11,9 @@
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestNg-test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestNg-test.iml" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestNg-test_main.iml" filepath="$PROJECT_DIR$/.idea/modules/TestNg-test_main.iml" group="TestNg-test" />
       <module fileurl="file://$PROJECT_DIR$/.idea/modules/TestNg-test_test.iml" filepath="$PROJECT_DIR$/.idea/modules/TestNg-test_test.iml" group="TestNg-test" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unitTests.iml" filepath="$PROJECT_DIR$/.idea/modules/unitTests.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unitTests_main.iml" filepath="$PROJECT_DIR$/.idea/modules/unitTests_main.iml" group="unitTests" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/unitTests_test.iml" filepath="$PROJECT_DIR$/.idea/modules/unitTests_test.iml" group="unitTests" />
     </modules>
   </component>
 </project>

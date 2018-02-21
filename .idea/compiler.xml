@@ -8,6 +8,8 @@
       <module name="OksanaQA12-AddressBook-Test_test" target="1.8" />
       <module name="TestNg-test_main" target="1.8" />
       <module name="TestNg-test_test" target="1.8" />
+      <module name="unitTests_main" target="1.8" />
+      <module name="unitTests_test" target="1.8" />
     </bytecodeTargetLevel>
   </component>
 </project>

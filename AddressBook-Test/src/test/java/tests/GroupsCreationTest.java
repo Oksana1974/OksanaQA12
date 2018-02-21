@@ -1,6 +1,8 @@
 package tests;
 
 import model.GroupData;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.testng.Assert;
 import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
@@ -14,6 +16,8 @@ import java.util.Iterator;
 import java.util.List;
 
 public class GroupsCreationTest extends TestBase{
+
+
 
     @DataProvider
     public Iterator<Object[]>validGroups()throws IOException{
@@ -34,6 +38,7 @@ public class GroupsCreationTest extends TestBase{
 
     @Test(dataProvider = "validGroups")
     public void groupsCreationTest(GroupData group) {
+
         app.goTo().groupsPage();
         List<GroupData> before = app.groups().getGroupList();
 //        int before = app.groups().getGroupCount();
@@ -45,6 +50,8 @@ public class GroupsCreationTest extends TestBase{
         Assert.assertEquals(after.size(), before.size()+1);
 //        int after = app.groups().getGroupCount();
 //        Assert.assertEquals(after, before+1);
+
+
     }
 
 }
