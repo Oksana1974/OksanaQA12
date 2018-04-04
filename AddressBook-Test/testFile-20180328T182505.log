@@ -1,0 +1,5 @@
+18:25:08.336 [main] INFO  tests.TestBase - Stop test contactsCreateTest
+18:25:08.343 [main] INFO  tests.TestBase - Stop test contactsCreateTest
+18:25:08.346 [main] INFO  tests.TestBase - Stop test contactsCreateTest
+18:25:08.352 [main] INFO  tests.TestBase - Stop test contactsCreateTestWithPhoto
+18:25:08.354 [main] INFO  tests.TestBase - Stop test getCurrentURL

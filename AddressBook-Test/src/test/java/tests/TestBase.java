@@ -13,7 +13,7 @@ import java.lang.reflect.Method;
 
 public class TestBase {
 
-    protected static final ApplicationManager app = new ApplicationManager(BrowserType.CHROME);
+    protected static final ApplicationManager app = new ApplicationManager(BrowserType.FIREFOX);
     Logger loger = LoggerFactory.getLogger(TestBase.class);
 
     @BeforeSuite
