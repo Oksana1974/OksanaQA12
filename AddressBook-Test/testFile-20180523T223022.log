@@ -1,0 +1,6 @@
+22:30:32.055 [main] INFO  tests.TestBase - Start test contactsCreateTest
+22:30:41.380 [main] INFO  tests.TestBase - Stop test contactsCreateTest
+22:30:41.380 [main] INFO  tests.TestBase - Start test contactsCreateTest
+22:30:50.766 [main] INFO  tests.TestBase - Stop test contactsCreateTest
+22:30:50.767 [main] INFO  tests.TestBase - Start test contactsCreateTest
+22:31:00.355 [main] INFO  tests.TestBase - Stop test contactsCreateTest

@@ -4,8 +4,12 @@
     <bytecodeTargetLevel>
       <module name="AddressBook-Test_main" target="1.8" />
       <module name="AddressBook-Test_test" target="1.8" />
+      <module name="New_AddressBook_main" target="1.8" />
+      <module name="New_AddressBook_test" target="1.8" />
       <module name="OksanaQA12-AddressBook-Test_main" target="1.8" />
       <module name="OksanaQA12-AddressBook-Test_test" target="1.8" />
+      <module name="OksanaQA12-New_AddressBook_main" target="1.8" />
+      <module name="OksanaQA12-New_AddressBook_test" target="1.8" />
       <module name="TestNg-test_main" target="1.8" />
       <module name="TestNg-test_test" target="1.8" />
       <module name="unitTests_main" target="1.8" />
